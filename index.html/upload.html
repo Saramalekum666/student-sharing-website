@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload | LENDR</title>
+    <link rel="stylesheet" href="css/upload.css">
+    <script src="js/upload.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>UPLOAD YOUR DETAILS</h2>
+        <button onclick="window.location.href='home.html'">Back to Home</button>
+
+        <h3>Upload Your ID Picture</h3>
+        <input type="file" id="idUpload" accept="image/*" onchange="previewImage('idUpload','idPreview')">
+        <br>
+        <img id="idPreview" class="preview-img" alt="ID Preview">
+
+        <div class="card">
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="room" placeholder="Room #">
+            <input type="text" id="strand" placeholder="Strand">
+            <input type="text" id="grade" placeholder="Grade">
+            <input type="text" id="section" placeholder="Section">
+        </div>
+
+        <h3>Item Details</h3>
+        <input type="text" id="itemName" placeholder="Item Name">
+        <input type="text" id="itemInfo" placeholder="Item Information">
+        <input type="file" id="itemUpload" accept="image/*" onchange="previewImage('itemUpload','itemPreview')">
+        <br>
+        <img id="itemPreview" class="preview-img" alt="Item Preview">
+
+        <br>
+        <button onclick="submitUpload()">Submit</button>
+
+        <div id="successMsg" class="success-msg"></div>
+    </div>
+
+    <img src="img/ACT Logo.png" class="right-bottom">
+
+</body>
+
+</html>
